@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Click Mouseover Mouseleave</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            $('div').css('width', '400px').css('height', '400px');
+            $('body').on({
+                click: function() {
+                    $('span').append("Div is clicked! <br>");
+                },
+                mouseenter: function() {
+                    $('span').append("Div is entered! <br>");
+                },
+                mouseleave: function() {
+                    $('span').append("Div is left! <br>");
+                }
+            }, 'div');
+        });
+    </script>
+</head>
+<body>
+    <div> This is a div tag. </div>
+    <span></span>
+    
+</body>
+</html>

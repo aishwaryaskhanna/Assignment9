@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Links</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            $('a').click(function(event){
+                var element= $(this);
+                event.preventDefault();
+                $(this).css('color','red');
+                window.alert(event.target.nodeName + " tag triggered the event!");
+            })
+        });
+    </script>
+</head>
+<body>
+    <a href="modulemedia.com"> Module Media</a>
+</body>
+</html>

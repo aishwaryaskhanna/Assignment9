@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validate form</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(function (){
+            $('#myForm').on('submit', function(event) {
+                event.preventDefault();
+                var name = $('#name').val();
+                if(name){
+                    $('#name').css('border','1px solid green');
+                    $('#nameError').hide();
+                }
+                else {
+                    $('#name').css('border','1px solid red');
+                    window.alert('Please enter the name');
+                }
+                var email = $('#email').val();
+                if(email) {
+                    $('#email').css('border','1px solid green');
+                    $('#emailError').hide();
+                }
+                else {
+                    $('#email').css('border','1px solid red');
+                    window.alert('Please enter the email');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="myForm">
+        <input id="name" placeholder="name" type="text">
+        <span id="nameError"></span><br><br>
+        <input id="email" placeholder="email" type="email">
+        <span id="emailError"></span><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
